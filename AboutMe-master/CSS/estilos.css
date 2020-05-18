@@ -1,0 +1,143 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+    background-image: url('https://brancopapeldeparede.fbitsstatic.net/img/p/papel-de-parede-degrade-azul-branco-63265/230245.jpg?w=450&h=450&v=no-change');
+    background-size: auto 90vh;
+    font-family: 'Arial';
+    font-size: 14px;
+  }
+  /*uma função, pensando na formatação da tela em outros dispositivos: se a minha tela tiver pelo menos 400px, as informações ai dentro serão carregadas. Irá redefinir o estilo do body*/
+@media(min-width: 400px ) {
+  body{
+    font-size: 20px ;
+  }
+}
+@media(min-width: 800px ) {
+  body{
+    font-size: 23px ;
+  }
+}
+
+  header{
+    height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .subtitulo,
+  .titulo{
+    text-align: center;
+    align-items: center;
+  }
+  .titulo{
+    font-size: 2em; /* 2x maior que o subtitulo*/
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  .subtitulo{
+    font-size: 25px;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 5vh;
+  }
+  
+  
+  .menu{
+    background:#0099ff; /* linguagemhexadecimal */
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    font-family: 'Patrick Hand', cursive;
+  }
+  .menu li{
+    list-style: none;
+  }
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  /*isso aqui é para aumentar a área para tocas nos links*/
+  .menu a{
+    display: block;
+    padding: 3vh;
+    padding-right: 10vw  ;
+    padding-left: 10vw ;
+  }
+  .menu a:houver{
+    color: rgb(64, 101, 224);
+  }
+  
+  a{
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline; 
+  }
+ 
+
+  .Sobre{
+    padding-left: 2em;
+    min-height: 80vh;
+  }
+  /*grid e flex fazem colunas, mas grid tem como você controlar o limite de colunar, o flex não. grid serve muito bem para layout*/
+  .Sobre .grid{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 240px;
+  }
+  @media(min-width: 568px){
+    .Sobre .grid{
+      grid-template-columns: 240px 240px;
+    }
+  }
+  @media(min-width: 800px){
+    .Sobre .grid{
+      grid-template-columns: 240px 240px;
+      align-content: center;
+      justify-content: center;
+      
+    }
+  }
+  .Sobre  h2{
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-bottom: 1.0em;
+  }
+  .Sobre figure{
+    text-align: center;
+  }
+  .img-Sobre{
+    height: 220px;
+    width: 260px;
+    object-fit: cover; /*para a imagen total se encaixar nos paramentros decididos*/
+    object-position:left; /*mesma coisa, porem posicionar melhor a imagem nos parametros decididos*/
+    border-radius: 50px;
+    }
+
+
+    .Contato{
+      padding-left: 2em;
+      min-height: 20vh;
+      background-color: #5050ff;
+    }
+    .Contato .icons{
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+    }
+    .Contato h2{
+      font-family: 'Gloria Hallelujah', cursive;
+      margin-bottom: 1.0em;
+    } 
+    .Contato a{
+      color: whitesmoke;
+      font-size: 4em;
+      
+    }
+    .Contato a:houver {
+      text-decoration: none;
+      text-shadow: 0px 0px 10px rgba(113, 25, 255, 0.5);
+    }
+
